@@ -1,26 +1,25 @@
 #include <stdio.h>
 int main()
 {
- int a,b,c;
- printf("enter values of a b and c");
- scanf("%d %d %d",&a,&b,&c);
- if(a>b)
+ int gsal,nsal,dis;
+ printf("Enter your gross sales-");
+ scanf("%d",&gsal);
+ if(gsal>20000)
  {
-     if(a>c)
+   dis=(15*gsal)/100;
+ }
+ else
+ {
+     if(gsal>10000&&gsal<20000)
      {
-         printf("%d is the greatest number",a);
+         dis=(10*gsal)/100;
      }
-     else{
-       printf("%d is the greatest number",c);
-     }
- }
+
  else{
-    if(b>c)
-    {
-      printf("%d is the greatest number",b);
-    }
-    else{
-        printf("%d is the greatest number",c);
-    }
+    dis=(5*gsal)/100;
  }
+ }
+ nsal=gsal-dis;
+ printf("The net sales is:-%d",nsal);
+ return 0;
 }
